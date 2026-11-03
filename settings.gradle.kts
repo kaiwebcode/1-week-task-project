@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "1 week task project"
+rootProject.name = "Android training"
 include(":app")
  
