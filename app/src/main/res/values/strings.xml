@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Employee Task Manager</string>
+    <string name="welcome_title">Employee Task Manager</string>
+    <string name="welcome_subtitle">Week 1 starter app — Day 1 setup complete</string>
+</resources>
