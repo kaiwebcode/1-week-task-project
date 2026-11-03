@@ -80,18 +80,19 @@ Day 1 build check: `app:assembleDebug` **succeeded**.
 1. **`java` not on PATH** — Android Studio’s JBR works; add `C:\Program Files\Android\Android Studio\jbr\bin` to User PATH, or use the session command above.
 2. **Codex CLI was missing** — installed with `npm install -g @openai/codex`.
 3. **Starter project had no Activity** — added `MainActivity` + layout + launcher intent-filter so the APK can launch.
-4. **No device attached initially** — use AVD `Pixel_5` or a physical device for the launch exit gate.
-5. **Git** — repository not initialized yet; complete init → first commit → remote push for the Day 1 Git exit gate.
+4. **Terminal Java path** — `java` is not on the default PATH in a fresh terminal. Set `JAVA_HOME` to Android Studio’s JBR as shown above; the Gradle build then succeeds.
+5. **Git** — initialized on `master`; the initial commit and current commit are pushed to `origin/master`.
 
 ## Day 1 exit gate checklist
 
-- [x] Tools verified (java via JBR, git, node, npm, adb, codex)
-- [x] Starter APK compiles (`assembleDebug`)
-- [ ] App launches on emulator or phone
-- [x] Cursor can identify main Activity (`MainActivity`)
-- [ ] Codex asked to identify main Activity (run locally after `codex login` if needed)
-- [ ] Git initialized, first commit, pushed to remote
-- [x] README documents setup + issues
+- [x] Android Studio/JBR, Android SDK, ADB, emulator, Git, Node/npm, and Codex CLI are available; the app builds and runs
+- [ ] Confirm Cursor sign-in (Cursor is installed, but the app closed before its account state could be checked)
+- [x] Chrome installed; Mermaid Markdown preview extension installed in Cursor
+- [x] Starter APK compiles (`app:assembleDebug`) and launches on the connected Pixel 5 emulator
+- [x] Cursor and Codex identify the main launcher Activity (`MainActivity`); see `docs/DAY1_SETUP_NOTES.md`
+- [x] Initial Git commit and current commit are pushed to `origin/master`
+- [x] README documents setup and the terminal Java PATH issue
+- [x] Emulator launch screenshot saved under `docs/screenshots/`
 
 ## Week map (from bootcamp PPT)
 
