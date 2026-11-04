@@ -2,4 +2,6 @@
     <string name="app_name">Android Training</string>
     <string name="welcome_title">Android Training</string>
     <string name="welcome_subtitle">Week 1 starter app — Day 1 setup complete</string>
+    <string name="view_task_details">View Task Details</string>
+    <string name="back_to_home">Back to Home</string>
 </resources>
