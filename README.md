@@ -94,6 +94,17 @@ Day 1 build check: `app:assembleDebug` **succeeded**.
 - [x] README documents setup and the terminal Java PATH issue
 - [x] Emulator launch screenshot saved under `docs/screenshots/`
 
+## Day 3 planning artifacts
+
+- Requirements and acceptance criteria: [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md)
+- Proposed development steps: [docs/DEVELOPMENT_PLAN.md](docs/DEVELOPMENT_PLAN.md)
+- Mermaid architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/diagrams/TASK_LIST_ARCHITECTURE.md](docs/diagrams/TASK_LIST_ARCHITECTURE.md)
+- Codex review: [docs/CODEX_REVIEW.md](docs/CODEX_REVIEW.md)
+- Next-session context: [docs/CURRENT_STATUS.md](docs/CURRENT_STATUS.md), [docs/DECISIONS.md](docs/DECISIONS.md), [docs/DEBUGGING_LOG.md](docs/DEBUGGING_LOG.md)
+- Submission checklist and trainer signoff: [docs/DAY3_SUBMISSION_CHECKLIST.md](docs/DAY3_SUBMISSION_CHECKLIST.md)
+
+Day 3 repository artifacts are prepared. Trainer approval remains pending; no feature implementation has started.
+
 ## Week map (from bootcamp PPT)
 
 | Day | Focus |
