@@ -10,7 +10,7 @@
 - [x] Implemented `TaskListViewModel` and `TaskListUiState` with live task counters and state emission.
 - [x] Built pixel-perfect UI matching reference design (gradient header, notification badge, stats cards, task adapter, FAB, bottom nav, bottom sheet dialog, celebration dialog).
 - [x] **Bug Challenge A (Button tap does nothing)**: Debugged via `Reproduce` → `Breakpoint` → `Root Cause` → `Fix` → `Retest`; wired click listeners and validation feedback (`docs/BUG_CHALLENGES.md`).
-- [x] **Bug Challenge B (Task list fails to display or update correctly)**: Debugged via `Inspect UI/State` → `Root Cause` → `Fix` → `Retest`; implemented `repeatOnLifecycle` StateFlow collection and `ListAdapter` (`docs/BUG_CHALLENGES.md`).
+- [x] **Bug Challenge B (Task list fails to display or update correctly)**: Implemented lifecycle-aware StateFlow collection and `ListAdapter`; review also corrected task completion to be one-way per trainer approval (`docs/BUG_CHALLENGES.md`).
 - [x] **SUBMIT Package**:
   - APK: `app/build/outputs/apk/debug/app-debug.apk` (`:app:assembleDebug` SUCCESSFUL)
   - Feature branch: `feature/task-list`
