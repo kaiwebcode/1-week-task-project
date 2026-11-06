@@ -1,7 +1,19 @@
 <resources>
-    <string name="app_name">Android Training</string>
-    <string name="welcome_title">Android Training</string>
-    <string name="welcome_subtitle">Week 1 starter app — Day 1 setup complete</string>
+    <string name="app_name">Employee Task Manager</string>
+    <string name="welcome_title">Employee Task Manager</string>
+    <string name="welcome_subtitle">Week 1 starter app — Day 4 Task List</string>
     <string name="view_task_details">View Task Details</string>
     <string name="back_to_home">Back to Home</string>
+
+    <string name="add_task_button">+ ADD TASK</string>
+    <string name="task_title_hint">Enter task title...</string>
+    <string name="status_in_progress">● In Progress</string>
+    <string name="status_completed">✓ Completed</string>
+    <string name="status_completed_btn">Completed</string>
+    <string name="action_complete">Complete</string>
+    <string name="empty_state_title">No Tasks Found</string>
+    <string name="empty_state_desc">You have no pending tasks. Enter a title above and tap + ADD TASK.</string>
+    <string name="your_tasks_header">YOUR TASKS</string>
+    <string name="task_count_format">%1$d Tasks</string>
+    <string name="error_banner_format">⚠ %1$s</string>
 </resources>
