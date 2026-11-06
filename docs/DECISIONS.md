@@ -1,20 +1,20 @@
 # Decisions and Assumptions
 
-## Proposed decisions (awaiting trainer approval)
+## Approved decisions (Trainer approved for Day 4)
 
-| Topic | Proposal | Status |
-|---|---|---|
-| First feature scope | Task List screen only | Pending |
-| Task fields | In-memory ID, required title, completion status | Pending |
-| Title validation | Trim title; reject blank input visibly | Pending |
-| Completion | Mark complete; toggle behavior needs trainer decision | Open |
-| Storage | In-memory repository; no persistence/backend | Pending |
-| State ownership | ViewModel owns UI state and handles events | Pending |
-| UI toolkit | Follow existing conventions; no migration without approval | Pending |
-| Completed tasks | Keep visible with completed status unless trainer directs otherwise | Pending |
+| Topic | Decision | Status | Rationale / Date |
+|---|---|---|---|
+| First feature scope | Task List screen only | Approved | Focus scope on single screen per Day 4 plan (Nov 2026) |
+| Task fields | In-memory ID (String), required title (String), completion status (Boolean) | Approved | Simple data model matching requirements |
+| Title validation | Trim title; reject blank or whitespace-only input with visible error message | Approved | Prevents invalid task creation with clear UI feedback |
+| Completion | One-way completion (incomplete -> complete) | Approved | Simple completion lifecycle for first iteration |
+| Storage | In-memory repository; no persistence/backend | Approved | Keep storage in-memory for Day 4 scope |
+| State ownership | ViewModel owns UI state (`TaskListUiState`) and handles UI events | Approved | Follows MVVM architecture with unidirectional data flow |
+| UI toolkit | XML Views + RecyclerView + ViewModel (Native AppCompat baseline) | Approved | Preserves existing app architecture without unapproved UI framework migration |
+| Completed tasks | Keep visible in main list with completed badge/strikethrough | Approved | Simple unified list UI showing full context |
 
 ## Session notes
-- Day 1 and Day 2 work is complete per user.
-- Existing app uses Kotlin, AppCompat Activity and XML layout. Proposed architecture must fit this baseline unless an approved change is made.
-- Day 3 is planning only. Do not add feature source code before trainer approval.
-- Update this file when trainer makes a decision; record rationale and date.
+- Day 1, 2, and 3 work complete and verified.
+- Trainer approval received for Day 4 implementation plan.
+- Architecture baseline: Kotlin, AppCompat Activity, XML layouts, RecyclerView, ViewModel, and InMemoryTaskRepository.
+

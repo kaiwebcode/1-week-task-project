@@ -1,4 +1,4 @@
-# Current Status — Day 3
+# Current Status — Day 4 (Implementation Phase)
 
 ## Done
 - [x] Reviewed Day 3 brief and translated the business request into user stories.
@@ -8,19 +8,20 @@
 - [x] Completed a Codex review of assumptions, risks and scope.
 - [x] Added README, AGENTS.md, Cursor rules and next-session status/decision/debugging context.
 - [x] Completed the repository artifact audit; see docs/DAY3_SUBMISSION_CHECKLIST.md.
+- [x] Obtained Trainer Approval for Day 4 roadmap & implementation decisions (recorded in docs/DECISIONS.md).
 
 ## Next
-1. Share the planning package with the trainer for review.
-2. Resolve open questions and record trainer approval or requested revisions in docs/DECISIONS.md.
-3. After approval, confirm Git state and create/use feature/task-list for Day 4.
+1. Create detailed implementation plan and roadmap (`implementation_plan.artifact.md`).
+2. Implement data model (`Task`), repository contract (`TaskRepository`), and in-memory implementation (`InMemoryTaskRepository`).
+3. Implement `TaskListViewModel` and `TaskListUiState` with title validation and event handling.
+4. Build XML layout (`activity_main.xml` update, `item_task.xml`) and `TaskAdapter` for RecyclerView.
+5. Connect `MainActivity` to `TaskListViewModel`.
+6. Add unit tests for ViewModel and Repository operations.
+7. Run build and manual verification, record test results.
 
 ## Blocked / pending
-- Trainer review and approval are pending. This cannot be recorded by the coding agent.
-- Confirm whether completion is one-way or toggleable, where completed tasks appear, exact empty/validation wording, and in-memory-only scope.
-- The plan content is prepared, but Cursor Plan mode execution is not evidenced in this workspace. If the trainer requires a Cursor-generated plan, run/review it in Cursor and reconcile differences before signoff.
-- No Day 4 feature implementation should begin until trainer approval is recorded.
+- None. Trainer approval is officially recorded and Day 4 implementation is authorized.
 
 ## Test results
-- No app feature code changed for Day 3. Android Studio IDE context reports multiple successful app build/run executions; a later run was started with no completion result available at this check.
-- Automated tests were not run.
-- Repository artifact checklist verified against the Day 3 slide requirements.
+- Unit tests to be added and run during Day 4 execution.
+
