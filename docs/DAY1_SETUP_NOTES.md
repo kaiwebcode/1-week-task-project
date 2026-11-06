@@ -13,22 +13,19 @@ It is registered in `AndroidManifest.xml` with:
 - `android.intent.action.MAIN`
 - `android.intent.category.LAUNCHER`
 
-## Codex check (run yourself)
-
-After `codex --version` works:
-
-```powershell
-codex "What is the main launcher Activity in this Android project? Cite the file path."
-```
-
-Paste the reply under **Codex answer** below for evidence.
+## Codex check (workspace review)
 
 ### Codex answer
 
-_(paste here)_
+The main launcher Activity is `com.example.a1weektaskproject.MainActivity`, in `app/src/main/java/com/example/a1weektaskproject/MainActivity.kt`. `app/src/main/AndroidManifest.xml` registers `.MainActivity` with the `MAIN` action and `LAUNCHER` category. Confirmed in this Codex workspace review.
+
+## Remaining workstation check
+
+- Cursor executable is installed and Mermaid Markdown preview is installed. The Cursor window closed during inspection, so its sign-in state remains unverified.
 
 ## Emulator launch evidence
 
-- AVD name: `Pixel_5`
-- When online, run: `adb devices` and paste output here.
-- Screenshot: emulator showing welcome screen → save under `docs/screenshots/` (create folder when ready).
+- Device: Pixel 5 emulator (`emulator-5554`, online)
+- Build: `app:assembleDebug` succeeded with Android Studio JBR set as `JAVA_HOME`.
+- Install and launch: `adb install -r app-debug.apk` succeeded; `am start` opened `com.example.a1weektaskproject/.MainActivity`.
+- Screenshot: [`docs/screenshots/day1-emulator.png`](screenshots/day1-emulator.png), captured November 3, 2026.
