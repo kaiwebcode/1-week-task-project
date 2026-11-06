@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupRecyclerView() {
         taskAdapter = TaskAdapter(
             onToggleComplete = { task ->
-                viewModel.toggleComplete(task.id)
+                viewModel.completeTask(task.id)
             },
             onItemClick = { task ->
                 val intent = Intent(this, TaskDetailsActivity::class.java).apply {
