@@ -11,19 +11,21 @@
 - [x] Built pixel-perfect UI matching reference design (gradient header, notification badge, stats cards, task adapter, FAB, bottom nav, bottom sheet dialog, celebration dialog).
 - [x] **Bug Challenge A (Button tap does nothing)**: Debugged via `Reproduce` → `Breakpoint` → `Root Cause` → `Fix` → `Retest`; wired click listeners and validation feedback (`docs/BUG_CHALLENGES.md`).
 - [x] **Bug Challenge B (Task list fails to display or update correctly)**: Implemented lifecycle-aware StateFlow collection and `ListAdapter`; review also corrected task completion to be one-way per trainer approval (`docs/BUG_CHALLENGES.md`).
-- [x] **SUBMIT Package**:
-  - APK: `app/build/outputs/apk/debug/app-debug.apk` (`:app:assembleDebug` SUCCESSFUL)
-  - Feature branch: `feature/task-list`
-  - PR: `docs/PULL_REQUEST.md`
-  - Codex review: `docs/CODEX_REVIEW.md`
-  - DEBUGGING_LOG.md: `docs/DEBUGGING_LOG.md`
-  - CURRENT_STATUS.md: `docs/CURRENT_STATUS.md`
-- [x] Verified unit tests (`:app:testDebugUnitTest` 6/6 passed).
+- [x] **Local submission artifacts**:
+  - APK: `app/build/outputs/apk/debug/app-debug.apk` (`:app:assembleDebug` passed Nov 7, 2026)
+  - Current branch: `day4/android-code-walkthrough` (verified Nov 7, 2026)
+  - Proposed PR text: `docs/PULL_REQUEST.md` (a hosting-service PR is not verified)
+  - Codex review summary: `docs/CODEX_REVIEW.md`
+  - Debugging log: `docs/DEBUGGING_LOG.md`
+  - Current status: `docs/CURRENT_STATUS.md`
+  - `git diff --check` passed Nov 7, 2026.
+- [x] Fixed issue where newly created tasks did not show details in `TaskDetailsActivity` by sharing `InMemoryTaskRepository` singleton instance across activities.
+- [x] Verified unit tests (`:app:testDebugUnitTest` 7/7 passed).
 
 ## Next
 - Demonstrate app execution to trainer.
 - Prepare for Day 5.
 
 ## Test results
-- `:app:testDebugUnitTest`: 6 passed, 0 failed.
+- `:app:testDebugUnitTest`: 7 passed, 0 failed.
 - `:app:assembleDebug`: Build finished successfully.

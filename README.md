@@ -103,7 +103,7 @@ Day 1 build check: `app:assembleDebug` **succeeded**.
 - Next-session context: [docs/CURRENT_STATUS.md](docs/CURRENT_STATUS.md), [docs/DECISIONS.md](docs/DECISIONS.md), [docs/DEBUGGING_LOG.md](docs/DEBUGGING_LOG.md)
 - Submission checklist and trainer signoff: [docs/DAY3_SUBMISSION_CHECKLIST.md](docs/DAY3_SUBMISSION_CHECKLIST.md)
 
-Day 3 repository artifacts are prepared. Trainer approval remains pending; no feature implementation has started.
+Day 3 planning artifacts were approved for Day 4 implementation. The Task List feature is implemented; see `docs/CURRENT_STATUS.md`, `docs/DECISIONS.md`, and `docs/PULL_REQUEST.md` for the current submission record.
 
 ## Week map (from bootcamp PPT)
 

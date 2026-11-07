@@ -35,4 +35,4 @@ flowchart LR
 The ViewModel is the source of truth for screen state. The first version is in-memory only and does not promise survival after process death or app restart. Keep the repository API simple until durable storage is approved.
 
 ## Status
-Proposed architecture; trainer approval pending. UI toolkit and exact file locations remain subject to inspection and approval.
+Trainer approved this architecture for the Day 4 Task List implementation. The app uses Kotlin, AppCompat Activity, XML layouts, RecyclerView, ViewModel, and an in-memory repository. See `docs/DECISIONS.md` and `docs/CURRENT_STATUS.md` for approval and implementation status.

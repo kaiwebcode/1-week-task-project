@@ -47,4 +47,4 @@ No due date, priority, assignee, backend, or cross-session persistence is includ
 - Confirm in-memory-only state for Day 4.
 
 ## Review status
-Drafted from the slide request. Trainer approval and answers to open questions are pending.
+Trainer approval for the Day 4 implementation decisions is recorded in `docs/DECISIONS.md`. The approved decisions resolve the implementation questions above: one-way completion, completed tasks remain visible, in-memory storage, and the XML/AppCompat UI. The feature is implemented; see `docs/CURRENT_STATUS.md`.

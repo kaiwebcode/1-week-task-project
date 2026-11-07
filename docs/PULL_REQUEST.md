@@ -1,27 +1,26 @@
-# Pull Request: Day 4 Task List Feature & UI Redesign
+# Pull Request: Task List Feature
 
-## Branch
-`feature/task-list` -> `main`
+## Submission status
+This file is the proposed PR description. It does not prove that a GitHub pull request was created or shared with the trainer.
+
+## Current branch
+`day4/android-code-walkthrough` (verified locally). Update the target branch and open a PR from the hosting service before sharing with the manager/trainer.
 
 ## Description
-This pull request implements the Day 4 **Task List Feature** and pixel-perfect UI redesign for the **Employee Task Manager** app, fully aligned with the Android Developer Bootcamp specifications, requirements, and reference design.
+Implements the Employee Task Manager Task List experience using the approved Kotlin, AppCompat, XML Views, RecyclerView, ViewModel, and in-memory repository architecture.
 
-## Key Changes
-1. **Domain & Data Layer**:
-   - Created `Task` data class with `id`, `title`, `description`, `isCompleted`, `priority` (`LOW`, `MEDIUM`, `HIGH`), and `dueDate`.
-   - Implemented `TaskRepository` contract and sample-populated `InMemoryTaskRepository`.
-2. **Presentation Layer (MVVM)**:
-   - Implemented `TaskListUiState` and `TaskListViewModel` with `StateFlow`.
-   - Added robust input validation (whitespace trimming, blank title rejection).
-3. **UI & Layouts**:
-   - Redesigned `activity_main.xml` with a dark purple gradient header, greeting `"Hello, Kaif! 👋"`, notification bell with red badge `2`, and responsive summary stat cards (Total, Completed, Pending).
-   - Created `BottomSheetDialog` for adding new tasks with live character counters (`0/100`, `0/250`) and priority selector pills.
-   - Created Task Completed celebration dialog popup.
-   - Redesigned `TaskDetailsActivity` and `item_task.xml` cards with status pill badges (`Pending` / `Completed`).
-4. **Testing**:
-   - Added unit test suite `TaskListViewModelTest.kt` verifying all validation, task addition, and completion rules.
+## Key changes
+- Added a task model, repository contract, and session-only in-memory repository.
+- Added ViewModel-owned `StateFlow` screen state for the task list and summary counters.
+- Added task creation with title validation, task completion, and task details UI.
+- Added XML layouts for the list, add-task bottom sheet, task rows, details screen, and completion dialog.
+- Added ViewModel unit tests.
 
-## Test Results
-- **Unit Tests**: `:app:testDebugUnitTest` $\rightarrow$ **6 passed, 0 failed**.
-- **Build**: `:app:assembleDebug` $\rightarrow$ **BUILD SUCCESSFUL**.
-- **APK Output**: `app/build/outputs/apk/debug/app-debug.apk`
+## Verification recorded
+- `:app:assembleDebug`: passed on Nov 7, 2026 (Android Studio JBR configured for the command).
+- `git diff --check`: passed on Nov 7, 2026.
+- `:app:testDebugUnitTest`: historical project record says 7 passed; not rerun in this review.
+- APK: `app/build/outputs/apk/debug/app-debug.apk`.
+
+## Known scope limitation
+Tasks are stored in memory and reset when the app process is recreated. No backend or durable persistence is included.

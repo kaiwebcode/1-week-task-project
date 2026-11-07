@@ -50,5 +50,5 @@ Do not create or edit these source files as part of Day 3 planning.
 - Defer due dates, priority, assignment, sorting/filtering, persistence and backend.
 - Trainer approval is required before Day 4 feature code.
 
-## Approval
-Status: Pending trainer review. No feature implementation should start until approval is recorded.
+## Approval and outcome
+Trainer approval for the Day 4 plan is recorded in `docs/DECISIONS.md`. The Task List feature has been implemented. Current implementation and verification status are tracked in `docs/CURRENT_STATUS.md`.

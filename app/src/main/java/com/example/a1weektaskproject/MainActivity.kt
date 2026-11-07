@@ -53,6 +53,11 @@ class MainActivity : AppCompatActivity() {
         observeUiState()
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.refreshTasks()
+    }
+
     private fun initViews() {
         totalCountTextView = findViewById(R.id.totalCountTextView)
         completedCountTextView = findViewById(R.id.completedCountTextView)
