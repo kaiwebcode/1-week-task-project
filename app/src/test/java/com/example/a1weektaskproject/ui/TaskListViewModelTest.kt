@@ -80,4 +80,17 @@ class TaskListViewModelTest {
         assertNotNull(state.newlyCompletedTask)
         assertEquals(pendingTask.id, state.newlyCompletedTask?.id)
     }
+
+    @Test
+    fun getTaskById_returnsNewlyCreatedTaskDetails() {
+        viewModel.addTask("Custom Task", "Custom description", TaskPriority.HIGH)
+        val state = viewModel.uiState.value
+        val createdTask = state.tasks.last()
+
+        val foundTask = repository.getTaskById(createdTask.id)
+        assertNotNull(foundTask)
+        assertEquals("Custom Task", foundTask?.title)
+        assertEquals("Custom description", foundTask?.description)
+        assertEquals(TaskPriority.HIGH, foundTask?.priority)
+    }
 }

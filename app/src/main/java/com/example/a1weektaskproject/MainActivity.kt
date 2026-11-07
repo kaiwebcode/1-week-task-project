@@ -53,6 +53,11 @@ class MainActivity : AppCompatActivity() {
         observeUiState()
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.refreshTasks()
+    }
+
     private fun initViews() {
         totalCountTextView = findViewById(R.id.totalCountTextView)
         completedCountTextView = findViewById(R.id.completedCountTextView)
@@ -67,7 +72,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupRecyclerView() {
         taskAdapter = TaskAdapter(
             onToggleComplete = { task ->
-                viewModel.toggleComplete(task.id)
+                viewModel.completeTask(task.id)
             },
             onItemClick = { task ->
                 val intent = Intent(this, TaskDetailsActivity::class.java).apply {

@@ -11,7 +11,7 @@ import com.google.android.material.button.MaterialButton
 
 class TaskDetailsActivity : AppCompatActivity() {
 
-    private val repository: TaskRepository = InMemoryTaskRepository()
+    private val repository: TaskRepository = InMemoryTaskRepository.getInstance()
     private var currentTask: Task? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +39,11 @@ class TaskDetailsActivity : AppCompatActivity() {
             detailSubtitle.text = if (task.description.isNotEmpty()) task.description else "Task ID: ${task.id}"
             detailDescriptionValue.text = if (task.description.isNotEmpty()) task.description else "No additional description provided."
             detailPriorityValue.text = "● ${task.priority.name.lowercase().replaceFirstChar { it.uppercase() }}"
+            when (task.priority) {
+                com.example.a1weektaskproject.data.TaskPriority.LOW -> detailPriorityValue.setTextColor(android.graphics.Color.parseColor("#6C5CE7"))
+                com.example.a1weektaskproject.data.TaskPriority.MEDIUM -> detailPriorityValue.setTextColor(android.graphics.Color.parseColor("#E65100"))
+                com.example.a1weektaskproject.data.TaskPriority.HIGH -> detailPriorityValue.setTextColor(android.graphics.Color.parseColor("#D63031"))
+            }
             detailDueDateValue.text = task.dueDate
 
             updateStatusUI(task, detailStatusBadge, markCompleteButton)

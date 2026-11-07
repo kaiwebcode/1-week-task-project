@@ -59,4 +59,15 @@ class InMemoryTaskRepository : TaskRepository {
     override fun getTaskById(id: String): Task? {
         return tasksList.find { it.id == id }
     }
+
+    companion object {
+        @Volatile
+        private var instance: InMemoryTaskRepository? = null
+
+        fun getInstance(): InMemoryTaskRepository {
+            return instance ?: synchronized(this) {
+                instance ?: InMemoryTaskRepository().also { instance = it }
+            }
+        }
+    }
 }

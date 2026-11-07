@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
 class TaskListViewModel(
-    private val repository: TaskRepository = InMemoryTaskRepository()
+    private val repository: TaskRepository = InMemoryTaskRepository.getInstance()
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(TaskListUiState())
@@ -66,7 +66,7 @@ class TaskListViewModel(
         }
     }
 
-    private fun refreshTasks(newlyCompleted: Task? = null) {
+    fun refreshTasks(newlyCompleted: Task? = null) {
         val currentTasks = repository.getTasks()
         val total = currentTasks.size
         val completed = currentTasks.count { it.isCompleted }

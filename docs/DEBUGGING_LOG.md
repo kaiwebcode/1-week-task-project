@@ -14,6 +14,8 @@
 - **Fix**: Implemented `repeatOnLifecycle(Lifecycle.State.STARTED)` collection in `MainActivity` and `ListAdapter` with `TaskDiffCallback` in `TaskAdapter`.
 - **Retest Result**: UI updates instantaneously on state change.
 
-## Build & Test Evidence
-- **Gradle Task `:app:testDebugUnitTest`**: 6 passed, 0 failed.
-- **Gradle Task `:app:assembleDebug`**: Build finished successfully (`app/build/outputs/apk/debug/app-debug.apk`).
+## Review Fix — Completion Is One-Way
+- **Finding**: The task row called `toggleComplete`, allowing a completed task to return to pending, contrary to the trainer-approved one-way completion decision.
+- **Fix**: The row action now calls `TaskListViewModel.completeTask`; repeated taps leave the task completed.
+- **Verification**: `:app:testDebugUnitTest` passed (6 passed, 0 skipped, 0 failed); `:app:assembleDebug` completed successfully; `git diff --check` passed.
+- **Static analysis**: No errors; existing Android lint/style warnings remain in `MainActivity.kt`.
